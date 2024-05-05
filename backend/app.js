@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
   });
   
   const corsOptions ={
-    origin:'gardenbeans.vercel.app', 
+    origin:'https://gardenbeans.vercel.app', 
     credentials:true,            //access-control-allow-credentials:true
     optionSuccessStatus:200
 }
