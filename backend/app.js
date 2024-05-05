@@ -13,12 +13,16 @@ app.get("/", (req, res) => {
     res.json({ "server status": "running" });
   });
   
-
+  const corsOptions ={
+    origin:'gardenbeans.vercel.app', 
+    credentials:true,            //access-control-allow-credentials:true
+    optionSuccessStatus:200
+}
 app.use(express.json());
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(fileUpload());
-app.use(cors());
+app.use(cors(corsOptions));
 
 //Route imports
 const products=require("./routes/productRoute");
