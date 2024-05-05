@@ -27,7 +27,7 @@ const orders=require("./routes/orderRoutes");
 const payments=require("./routes/paymentRoute");
 
 //middleware for errors
-const allowedOrigins = [`${process.env.FRONTEND_URL}`,`${process.end.FRONTEND_DEPLOYED_URL}`];
+const allowedOrigins = [`${process.env.FRONTEND_URL}`];
 
 app.use((req, res, next) => {
   const origin = req.headers.origin;
